@@ -150,7 +150,7 @@ const UpdatePassword = () => {
             </form>
             <div className="form-section">
               <p>
-                New to Movix?{" "}
+                New to watchBox?{" "}
                 <a
                   onClick={() => {
                     navigate("/sign-in");
