@@ -25,7 +25,7 @@ const MyProfile = () => {
 
   useEffect(() => {
     setStorage(existingUserDetails);
-  }, [existingUserDetails]);
+  }, []);
 
   useEffect(() => {
     const fetchBackground = async () => {
