@@ -33,7 +33,7 @@
         img {
             height: 30px;
             // filter: invert(48%) sepia(15%) saturate(3207%) hue-rotate(10deg) brightness(100%) contrast(200%);
-            filter: drop-shadow(2px 1px 0px gray);
+            filter: drop-shadow(1px 1px 0px gray);
             @include md {
                 height: 50px;    
             }
