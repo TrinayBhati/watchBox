@@ -1,0 +1,24 @@
+@import "../../mixins.scss";
+
+.privacyTop{
+    padding-top: 10%;
+}
+.prevtitle{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: white;
+    @include md{
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+}
+.subprevtitle {
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: gray;
+    @include md {
+        font-size: 18px;
+    }
+}

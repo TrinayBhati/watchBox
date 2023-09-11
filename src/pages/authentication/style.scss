@@ -1,0 +1,231 @@
+@import "../../mixins.scss"; 
+
+.heroBanner{
+    width: 100%;
+    height: 100vh;
+    background-color: var (--black);
+    display: flex;
+    align-items: center;
+    position: relative;
+    @include md{
+        height: 700px;
+    }
+    
+   
+
+    .logo {
+        cursor: pointer;
+        margin-bottom: 5%;
+        img {
+            height: 50px;
+            // filter: invert(48%) sepia(15%) saturate(3207%) hue-rotate(10deg) brightness(100%) contrast(200%);
+            filter: drop-shadow(2px 2px 0px gray);
+            @include md {
+                height: 70px;    
+            }
+          }
+          
+    }
+    .myBounceDiv {
+        animation: bounce 0.5s;
+      }
+      
+      @keyframes bounce {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(0.9);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    .backdrop-img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+        overflow: hidden;
+        .lazy-load-image-background{
+            width: 100%;
+            height: 100%;
+            img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            }
+        }
+    }
+    .opacity-layer-subs{
+        width: 100%;
+        height: 250px;
+        // background: linear-gradient(
+        //     180deg,
+        //      rgba(4, 21, 45, 0)0%,
+        //      #04152d 79.17%);
+             
+             background: linear-gradient(
+            180deg,
+             rgba(4, 21, 45, 0)0%,
+             var( --black) 79.17%);
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .heroBannerContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        text-align: center;
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        
+        .title{
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 0;
+            @include md{
+                margin-bottom: 0;
+                font-size: 90px;
+            }
+        }
+        .subTitle {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 40px;
+            @include md {
+                font-size: 24px;
+            }
+        }
+            .searchInput{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                input{
+                    width: calc(100% - 100px);
+                    height: 50px;
+                    background-color: white;
+                    outline: 0;
+                    border: 0;
+                    border-radius: 30px 0 0 30px;
+                    padding: 0 15px;
+                    font-size: 14px;
+                    @include md {
+                            width: calc(100% - 150px);
+                            height: 60px;
+                            font-size: 20px;
+                            padding: 0 30px;
+                    }
+            }
+            button {
+                width: 100px;
+                height: 50px;
+                background: var(--gradient);
+                color: white;
+                outline: 0;
+                border: 0;
+                border-radius: 0 30px 30px 0;
+                font-size: 16px;
+                cursor: pointer;
+                @include md{
+                    width: 150px;
+                    height: 60px;
+                    font-size: 18px;
+                }
+            }
+        }
+        .form-box {
+            max-width: 500px;
+            background-color: rgba(0, 0, 0, 0.7); /* Red with 50% transparency */
+
+            overflow: hidden;
+            border-radius: 16px;
+            color: white;
+          }
+          
+          .form {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 32px 24px 24px;
+            gap: 16px;
+            text-align: center;
+          }
+          
+          /*Form text*/
+          .logtitle {
+            font-weight: bold;
+            font-size: 2.6rem;
+          }
+          
+          .logsubtitle {
+            font-size: 1rem;
+            color: #666;
+          }
+          
+          /*Inputs box*/
+          .form-container {
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: var(--black3);
+            margin: 1rem 0 .5rem;
+            width: 100%;
+          }
+          
+          .input {
+            background: none;
+            border: 0;
+            outline: 0;
+            height: 50px;
+            width: 100%;
+            border-bottom: 1px solid var(--black);
+            font-size: .9rem;
+            padding: 8px 15px;
+            color: white;
+          }
+          
+          .form-section {
+            padding: 16px;
+            font-size: .85rem;
+            background-color: var(--black3);
+            box-shadow: rgb(0 0 0 / 8%) 0 -1px;
+          }
+          
+          .form-section a {
+            font-weight: bold;
+            color: #0066ff;
+            transition: color .3s ease;
+          }
+          
+          .form-section a:hover {
+            color: #005ce6;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+          
+          /*Button*/
+          .form button {
+            background: var(--gradient);
+            color: #fff;
+            border: 0;
+            border-radius: 24px;
+            padding: 10px 16px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color .3s ease;
+          }
+          
+          .form button:hover {
+            background-color: #005ce6;
+          }
+    }
+    
+}
