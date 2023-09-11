@@ -121,7 +121,7 @@ const MyProfile = () => {
             <div className="text2">Logout</div>
           </button>
         </div>
-        {array?.length != 0 ? (
+        {array?.length != 0  && array  ? (
           <div className="carouselTitle">Your Watchlist</div>
         ) : (
           <div className="carouselTitle">Your Watchlist is empty.</div>
