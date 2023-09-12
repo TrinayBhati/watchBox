@@ -19,6 +19,7 @@ import Layout from "./Layout";
 import MyProfile from "./pages/myProfile/MyProfile";
 import UpdatePassword from "./pages/authentication/UpdatePassword";
 import ProtectedRoute from "./ProtectedRoute";
+import Profile from "./pages/profile/Profile";
 
 function App() {
   const dispatch = useDispatch();
@@ -118,6 +119,16 @@ function App() {
             element={
               <Layout>
                 <PrivacyTerms />
+              </Layout>
+            }
+          />
+          <Route
+            path="/profile/:id"
+            element={
+              <Layout>
+                <ProtectedRoute>
+                  <Profile />
+                </ProtectedRoute>
               </Layout>
             }
           />

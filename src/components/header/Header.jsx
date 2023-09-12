@@ -30,7 +30,7 @@ const Header = () => {
 
   useEffect(() => {
     setStorage(existingUserDetails);
-  }, [existingUserDetails]);
+  }, []);
 
   const { status } = useSelector((state) => state.auth);
 
@@ -103,7 +103,7 @@ const Header = () => {
         </div>
         <ul className="menuItems">
           <button
-            class="Btn"
+            className="Btn"
             onClick={() => {
               navigate("/subscription");
             }}
