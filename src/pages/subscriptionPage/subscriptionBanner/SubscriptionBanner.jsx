@@ -112,7 +112,7 @@ const SubscriptionBanner = () => {
         style={customStyles}
         ariaHideApp={false}
       >
-        <h2>User already exists</h2>
+        <h2>Payment Successful </h2>
         {/* <button className="hwe" onClick={closeModal}>
           Close Modal
         </button> */}
