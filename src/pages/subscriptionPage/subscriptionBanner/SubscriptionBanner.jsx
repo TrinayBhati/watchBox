@@ -5,9 +5,12 @@ import { useSelector, useDispatch } from "react-redux";
 import useFetch from "../../../hooks/useFetch";
 import Img from "../../../components/lazyLoadImage/Img";
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
+import Modal from "react-modal";
 
 const SubscriptionBanner = () => {
   const [background, setBackground] = useState("");
+    const [isModalOpen, setIsModalOpen] = useState(false);
+  
   const navigate = useNavigate();
   const { url } = useSelector((state) => state.home);
 
@@ -20,6 +23,42 @@ const SubscriptionBanner = () => {
     setBackground(bg);
     // console.log("bg", background);
   }, [data]);
+
+   const openModal = () => {
+    // Function to open modal
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    // Function to close modal
+    setIsModalOpen(false);
+  };
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      width: "80vw",
+      maxWidth: "400px",
+      borderRadius: "10px",
+      padding: "20px",
+      backgroundColor: "#1E2A38", // You can change this color
+      boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)", // Box shadow for the modal
+      color: "white", // Text color
+      fontSize: "1.5rem",
+      // fontFamily: "Pacifico, cursive",
+      border: "none",
+      display: "flex", // Center contents horizontally
+      flexDirection: "column",
+      alignItems: "center", // Center contents vertically
+      justifyContent: "center", // Center contents horizontally
+      textAlign: "center", // Center text within the modal
+      textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)", // Text shadow
+    },
+    overlay: {
+      backgroundColor: "rgba(0, 0, 0, 0.8)", // Background color for the overlay
+    },
+  };
 
   return (
     <div className="heroBanner">
@@ -44,7 +83,7 @@ const SubscriptionBanner = () => {
               <button
                 class="Btn"
                 onClick={() => {
-                  console.log("payment successful");
+                 openModal()
                 }}
               >
                 Pay
@@ -67,6 +106,17 @@ const SubscriptionBanner = () => {
           </div>
         </div>
       </ContentWrapper>
+       <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        ariaHideApp={false}
+      >
+        <h2>User already exists</h2>
+        {/* <button className="hwe" onClick={closeModal}>
+          Close Modal
+        </button> */}
+      </Modal>
     </div>
   );
 };
