@@ -45,6 +45,8 @@ const MyProfile = () => {
   const handleLogout = () => {
     localStorage.setItem("userDetails", null);
     navigate("/");
+ window.location.reload();
+
   };
 
   return (
