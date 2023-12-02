@@ -1,5 +1,5 @@
 
-# WatchBox - Your Ultimate OTT Platform
+# [WatchBox - Your Ultimate OTT Platform](https://watchbox-tv.netlify.app/)
 
 Welcome to WatchBox, your go-to OTT platform for managing your favorite movies and TV shows. Watch trailers, create a watchlist, and enjoy a seamless viewing experience. This project is built with a combination of React, Redux, HTML, CSS, and SCSS, offering a fantastic user interface with advanced features such as search functionality, infinite scroll, and multiple sorting options.
 
